@@ -1,4 +1,4 @@
-package com.lucas.auth_service;
+package com.lucas.authservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
