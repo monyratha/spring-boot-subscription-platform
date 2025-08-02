@@ -6,17 +6,17 @@ A modular, microservices-based SaaS platform built with Spring Boot 3.5.4 and Sp
 
 ## 🧱 Project Modules
 
-| Module             | Description |
-|--------------------|-------------|
-| `auth-service`     | Handles user authentication (login, register, JWT issuance, password hashing) |
-| `user-service`     | Manages users, profiles, roles, permissions, and referral/invite codes |
-| `site-service`     | Manages customer sites (subdomains), ownership, and multi-tenant logic |
-| `subscription-service` | Handles subscription plans, active plans, history, billing, etc. |
-| `config-service`   | Centralized Spring Cloud Config Server (Git-backed) |
-| `gateway-service`  | API Gateway using Spring Cloud Gateway + route-based authentication |
-| `discovery-service`| Eureka server for service discovery |
-| `audit-log-service`| Tracks and stores all important user/system actions |
-| `settings-service` | Platform-wide configuration and environment flags |
+| Module             | Description | Status |
+|--------------------|-------------|--------|
+| `auth-service`     | Handles user authentication (login, register, JWT issuance, password hashing) | Available |
+| `user-service`     | Manages users, profiles, roles, permissions, and referral/invite codes | Planned |
+| `site-service`     | Manages customer sites (subdomains), ownership, and multi-tenant logic | Planned |
+| `subscription-service` | Handles subscription plans, active plans, history, billing, etc. | Planned |
+| `config-service`   | Centralized Spring Cloud Config Server (Git-backed) | Planned |
+| `gateway-service`  | API Gateway using Spring Cloud Gateway + route-based authentication | Planned |
+| `discovery-service`| Eureka server for service discovery | Planned |
+| `audit-log-service`| Tracks and stores all important user/system actions | Planned |
+| `settings-service` | Platform-wide configuration and environment flags | Planned |
 
 ---
 
@@ -71,15 +71,15 @@ A modular, microservices-based SaaS platform built with Spring Boot 3.5.4 and Sp
 
 ```azure
 spring-boot-subscription-platform/
-├── pom.xml # Parent POM
-├── auth-service/ # First service (login/register/jwt)
-├── config-service/ # Spring Cloud Config Server
-├── discovery-service/ # Eureka
-├── user-service/ # User management & RBAC
-├── site-service/ # Subdomain management
-├── subscription-service/ # Plan logic
-├── docker/ # Docker Compose setup
-└── config-repo/ # Git-backed external config files
+├── pom.xml                # Parent POM
+├── auth-service/          # First service (login/register/jwt)
+├── user-service/          # Planned: user management & RBAC
+├── site-service/          # Planned: subdomain management
+├── subscription-service/  # Planned: plan logic
+├── config-service/        # Planned: Spring Cloud Config Server
+├── discovery-service/     # Planned: Eureka
+├── docker/                # Planned: Docker Compose setup
+└── config-repo/           # Planned: Git-backed external config files
 ```
 
 
