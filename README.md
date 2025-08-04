@@ -12,9 +12,9 @@ A modular, microservices-based SaaS platform built with Spring Boot 3.5.4 and Sp
 | `user-service`     | Manages users, profiles, roles, permissions, and referral/invite codes | Planned |
 | `site-service`     | Manages customer sites (subdomains), ownership, and multi-tenant logic | Planned |
 | `subscription-service` | Handles subscription plans, active plans, history, billing, etc. | Planned |
-| `config-service`   | Centralized Spring Cloud Config Server (Git-backed) | Planned |
+| `config-service`   | Centralized Spring Cloud Config Server (Git-backed) | Available |
 | `gateway-service`  | API Gateway using Spring Cloud Gateway + route-based authentication | Planned |
-| `discovery-service`| Eureka server for service discovery | Planned |
+| `discovery-service`| Eureka server for service discovery | Available |
 | `audit-log-service`| Tracks and stores all important user/system actions | Planned |
 | `settings-service` | Platform-wide configuration and environment flags | Planned |
 
@@ -25,8 +25,8 @@ A modular, microservices-based SaaS platform built with Spring Boot 3.5.4 and Sp
 ### ✅ Phase 1: Infrastructure Setup
 - [x] Create parent Maven project (`spring-boot-subscription-platform`)
 - [x] Add `auth-service` as module
-- [ ] Create and register `config-service`
-- [ ] Add `discovery-service` (Eureka)
+- [x] Create and register `config-service`
+- [x] Add `discovery-service` (Eureka)
 - [ ] Implement Docker Compose to launch all services locally
 
 ### 🧩 Phase 2: Core Features
@@ -76,8 +76,8 @@ spring-boot-subscription-platform/
 ├── user-service/          # Planned: user management & RBAC
 ├── site-service/          # Planned: subdomain management
 ├── subscription-service/  # Planned: plan logic
-├── config-service/        # Planned: Spring Cloud Config Server
-├── discovery-service/     # Planned: Eureka
+├── config-service/        # Spring Cloud Config Server
+├── discovery-service/     # Eureka server for service discovery
 ├── docker/                # Planned: Docker Compose setup
 └── config-repo/           # Planned: Git-backed external config files
 ```
