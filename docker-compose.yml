@@ -23,6 +23,12 @@ services:
       - spring-cloud
     environment:
       SPRING_PROFILES_ACTIVE: native
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
 
   discovery-service:
     build: ./discovery-service
@@ -36,9 +42,12 @@ services:
     build: ./auth-service
     container_name: auth-service
     depends_on:
-      - mysql
-      - config-service
-      - discovery-service
+      config-service:
+        condition: service_healthy
+      mysql:
+        condition: service_started
+      discovery-service:
+        condition: service_started
     ports:
       - "8081:8081"
     networks:
